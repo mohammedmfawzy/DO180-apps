@@ -1,0 +1,98 @@
+# lab-configure
+
+Username:maly12
+Password:16e6ef1e83764250a769
+API Endpoint:https://api.ocp-eu2.prod.nextcle.com:6443
+Cluster Id:5ee65450-6e18-46e4-bb6d-535a44ec33c4
+
+# Add Enviroment Variable to the start Command
+
+
+# Start lab container
+lab container-create start
+
+# Podman Create image for mysql
+sudo podman run --name mysql-basic  -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55  -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 -d rhscl/mysql-57-rhel7:5.7-3.14
+
+# Podman access server
+sudo podman exec -it mysql-basic /bin/bash
+
+# Create table
+CREATE TABLE Projects (id int(11) NOT NULL, name varchar(255) DEFAULT NULL, code varchar(255) DEFAULT NULL, PRIMARY KEY (id));
+
+# Insert Record
+insert into Projects (id, name, code) values (1,'DevOps','DO180');
+
+# Finish lab create to clean
+lab container-create finish
+
+# Labs
+lab container-review start
+
+# Create Contianer for HTTP
+sudo podman run --name httpd-basic  -p 8080:80 -d redhattraining/httpd-parent
+
+# Login to http server
+sudo podman exec -it httpd-basic /bin/bash
+
+# access home page from workstation
+http://localhost:8080
+
+# Create index.html page
+echo "<html><h1>Hello World</h1></html>" > /var/www/html/index.html
+
+# Grade Lab
+lab container-review grade
+
+# Finish lab
+lab container-review finish
+
+# To get Pods logs
+podman logs mysql-basic
+
+# To execute command on container
+sudo podman exec mysql /bin/bash  -c 'mysql -uuser1 -p -e "select * from items.Projects;"'
+
+# To Manage storage
+# Create Directory
+sudo mkdir -pv /var/local/mysql
+
+# Create SELinux policy to the folder
+sudo semanage fcontext -a -t container_file_t '/var/local/mysql(/.*)?'
+
+# Apply the policy to the folder
+sudo restorecon -R /var/local/mysql
+
+# To verify the policy created
+ls -dZ /var/local/mysql
+
+# Change owner of the folder
+sudo chown -Rv 27:27 /var/local/mysql
+
+# Start the container with mount point
+sudo podman run --name persist-db -d -v /var/local/mysql:/var/lib/mysql/data -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 rhscl/mysql-57-rhel7
+
+# Login to Quay.io
+sudo podman login quay.io
+
+# Pull Image
+sudo podman run -d --name official-httpd -p 8180:80 redhattraining/httpd-parent
+
+# Make change in image
+echo "DO180 Page" > /var/www/html/do180.html
+
+# To check the differences
+sudo podman diff official-httpd
+
+# Commit changes
+sudo podman commit -a 'Mohamed Fawzy' official-httpd do180-custom-httpd
+
+# Tag image
+sudo podman tag do180-custom-httpd  quay.io/${RHT_OCP4_QUAY_USER}/do180-custom-httpd:v1.0
+
+# Push image to public repository
+sudo podman push quay.io/${RHT_OCP4_QUAY_USER}/do180-custom-httpd:v1.0
+
+# Pull the new custom image
+sudo podman pull -q quay.io/${RHT_OCP4_QUAY_USER}/do180-custom-httpd:v1.0
+
