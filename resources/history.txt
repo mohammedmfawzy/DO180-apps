@@ -1,0 +1,1000 @@
+  331  rm ./stopmongodb 
+  332  vi ./stopall 
+  333  vi ./startall 
+  334  ls
+  335  cd
+  336  ls
+  337  mkdir shared
+  338  cd shared/
+  339  ls
+  340  ln -s /home/mfawzy/workspaces/ ./
+  341  ln -s /home/mfawzy/Downloads/ ./
+  342  ln -s /home/mfawzy/Documents/ ./
+  343  ln -s /home/mfawzy/javaprograms/ ./
+  344  ls
+  345  exit
+  346  sudo apt-get update
+  347  sudo updatedb
+  348  sudo apt-get upgrade 
+  349  cd javaprograms/others/
+  350  ls
+  351  rm ./jenkins.war.*
+  352  ls
+  353  cd
+  354  ls
+  355  c
+  356  sudo apt-get upgrade 
+  357  stopjenkins 
+  358  stopdynamodb 
+  359  exit
+  360  startcassandra 
+  361  docker pull mohammedmfawzy/centos-springboot-app
+  362  ps -ef | grep mongo
+  363  sudo service mongodb restart
+  364  startjenkins 
+  365  startdynamodb 
+  366  startopenshift 
+  367  stopopenshift 
+  368  startopenshift 
+  369  oc login -u system:admin
+  370  oc project mongoapp
+  371  oc get pods
+  372  oc rsh
+  373  oc get pods
+  374  cp ./javaprograms/editors/eclipse/icon.xpm ./javaprograms/editors/mat/
+  375  oc get pods
+  376  oc rsh mongoapp-1-xr2ts
+  377  stopopenshift 
+  378  exit
+  379  startwindows 
+  380  stopwindows 
+  381  stopcassandra 
+  382  exit
+  383  podman run --name httpd-basic -d -p 8080:80 httpd:2.4
+  384  podman ps -a
+  385  podman exec -it httpd-basic /bin/bash
+  386  ls
+  387  cd workspaces/
+  388  ls
+  389  cd redhat/
+  390  ls
+  391  git clone git@github.com:RedHatTraining/DO288-apps.git
+  392  ls
+  393  cd DO288-apps/
+  394  ls
+  395  cd ..
+  396  ls
+  397  rm -rf ./DO288-apps/
+  398  ls
+  399  git clone git@github.com:mohammedmfawzy/DO288-apps.git
+  400  cd DO288-apps/
+  401  ls
+  402  mkdir resources
+  403  cd resources/
+  404  ls
+  405  mv ../../do288-4.2-student-guide.pdf ./
+  406  ls
+  407  cd ..
+  408  ls
+  409  cd ..
+  410  ls
+  411  cd DO288-apps/
+  412  ls
+  413  git status
+  414  git add .
+  415  git commit -m "Adding resources"
+  416  git push
+  417  ls
+  418  cd resources/
+  419  ls
+  420  mv ./#\ lab-configure  ./commands.txt
+  421  ls
+  422  mv ./commands.txt ./Commands.txt
+  423  exit
+  424  oc login --help
+  425  oc login https://api.ocp-eu2.prod.nextcle.com:6443 -u maly12 -p 16e6ef1e83764250a769
+  426  oc projects
+  427  ls
+  428  oc rsh -h
+  429  oc whoami
+  430  oc --help
+  431  cd workspaces/
+  432  ls
+  433  cd redhat/DO288-apps/
+  434  ls
+  435  git pull
+  436  cd resources/
+  437  ls
+  438  mv ./To\ Do.txt ./To_Do.txt 
+  439  cd ..
+  440  ls
+  441  cd ..
+  442  ls
+  443  git status
+  444  cd DO288-apps/
+  445  ls
+  446  git status
+  447  git add .
+  448  git commit -m "update the guide file"
+  449  git push
+  450  cd ../
+  451  ls
+  452  exit
+  453  sudo service mongodb start
+  454  cd workspaces/
+  455  ls
+  456  mkdir redhat
+  457  cd redhat/
+  458  ls
+  459  mkdir DO180
+  460  cd DO180/
+  461  ls
+  462  mkdir resources
+  463  cd resources/
+  464  ls
+  465  mv /home/mfawzy/Downloads/do180-4.2-student-guide.pdf ./
+  466  cd ..
+  467  ls
+  468  cd ..
+  469  ls
+  470  git init
+  471  git add .
+  472  git commit -m "first commit"
+  473  git config --global user.email "mohammed .m.fawzy@gmail.com"
+  474  git config --global user.email "mohammed.m.fawzy@gmail.com"
+  475  git config --global user.name "Mohamed fawzy"
+  476  git config --global user.name "Mohamed Fawzy"
+  477  git commit -m "Add first resources to DO180"
+  478  git push
+  479  git remote add origin git@github.com:mohammedmfawzy/redhat.git
+  480  git push -u origin master
+  481  ls
+  482  cd DO180/
+  483  ls
+  484  cd resources/
+  485  ls
+  486  rm ./Quiz.odt 
+  487  rm ./Answers.ods 
+  488  ls
+  489  cd ..
+  490  ls
+  491  mv ./resources/ ..
+  492  ls
+  493  cd ..
+  494  ls
+  495  rm -rf ./DO180/
+  496  ls
+  497  ls -la
+  498  rm -rf ./.git/
+  499  ls
+  500  git clone git@github.com:mohammedmfawzy/DO180-apps.git
+  501  ls
+  502  mv ./resources/ ./DO180-apps/
+  503  ls
+  504  cd DO180-apps/
+  505  ls
+  506  git status
+  507  git add .
+  508  git commit -m "Add resources"
+  509  git push
+  510  docker search oracle
+  511  docker search rhel
+  512  podman search rhel
+  513  podman pull rhel
+  514  ls
+  515  startwindows 
+  516  podman ps -a
+  517  podman ps stop httpd-basic
+  518  podman ps stop --help
+  519  startwindows 
+  520  podman ps
+  521  podman inspect httpd-basic
+  522  podman inspect httpd-basic -f '{{ .NetworkSettings.IPAdress }}' httpd-basic
+  523  podman inspect httpd-basic -f '{{ .NetworkSettings.IPAddress }}' httpd-basic
+  524  podman stop httpd-basic
+  525  podman ps
+  526  podman ps -a
+  527  podman kill httpd-basic
+  528  podman pull mysql-57
+  529  podman search mysql-57
+  530  podman run --name mysql-db docker.io/centos/mysql-57-centos7
+  531  ls /var/lib/mysql/
+  532  sudo ls /var/lib/mysql/
+  533  history  | grep podman
+  534  sudo vi /etc/containers/registries.conf 
+  535  ls
+  536  exit
+  537  docker ps -a
+  538  startwindows 
+  539  stopwindows 
+  540  ssh student@172.25.250.254
+  541  ping 172.25.250.254
+  542  ping 172.25.252.1
+  543  docker inspect
+  544  ssh student@
+  545  ssh student@35.205.239.91
+  546  cat /etc/containers/registries.conf 
+  547  podman login -u mohammedmfawzy docker.io
+  548  podman images
+  549  podman login -u mohammedmfawzy docker.io -p
+  550  podman login -u mohammedmfawzy docker.io 
+  551  startopenshift 
+  552  stopopenshift 
+  553  cd workspaces/springboot/
+  554  ls
+  555  podman build -t springboot:v1.0 .
+  556  ls
+  557  podman build -t springboot:v1.0 .
+  558  podman images
+  559  podman rmi 681bf9132f51
+  560  podman rmi 6e204537ff51
+  561  podman images
+  562  podman rmi 681bf9132f51
+  563  podman ps
+  564  podman ps -a
+  565  podman rm 48d05c11e0ea
+  566  podman rm 2f081a8cc58e
+  567  podman ps -a
+  568  podman rm 2f081a8cc58e
+  569  podman rmi 681bf9132f51
+  570  ls
+  571  cp ./Dockerfile ../springframework5/spring5webapp/
+  572  cd ../springframework5/spring5webapp/
+  573  ls
+  574  vi ./Dockerfile 
+  575  podman images
+  576  podman rmi --force 681bf9132f51
+  577  podman images
+  578  podman rmi --force 41c7488e7577
+  579  podman images
+  580  ls
+  581  podman build --layers=false -t spring5webapp .
+  582  vi ./Dockerfile 
+  583  ls ./target/
+  584  vi ./Dockerfile 
+  585  podman build --layers=false -t spring5webapp .
+  586  vi ./Dockerfile 
+  587  ls
+  588  cp ../../springboot/install.sh ./
+  589  vi ./install.sh 
+  590  podman build --layers=false -t spring5webapp .
+  591  ls
+  592  vi ./Dockerfile 
+  593  podman images
+  594  podman build --layers=false -t spring5webapp .
+  595  ls
+  596  vi ./install.sh 
+  597  podman build --layers=false -t spring5webapp .
+  598  vi ./Dockerfile 
+  599  podman build --layers=false -t spring5webapp .
+  600  podman ps
+  601  podman images
+  602  podman run --name testpod -it docker.io/centos/mysql-57-centos7 /bin/bash
+  603  podman ps -a
+  604  podman stop testpod
+  605  podman rm testpod
+  606  ls
+  607  podman images
+  608  podman run --name testpod -it docker.io/library/httpd /bin/bash
+  609  podman ps -a
+  610  podman stop testpod
+  611  podman rm testpod
+  612  podman run --name testpod -d docker.io/library/httpd 
+  613  podman exec testpod -e "yum install java-11-openjdk-devel'
+  614  podman exec testpod -e "yum install java-11-openjdk-devel"
+  615  podman exec -it testpod bash
+  616  podman stop testpod
+  617  podman rm testpod
+  618  podman images
+  619  export JAVA_HOME=\$(dirname \$(dirname \$(readlink \$(readlink \$(which javac)))))
+  620  export PATH=\$PATH:\$JAVA_HOME/bin
+  621  export JAVA_HOME=\$(dirname \$(dirname \$(readlink \$(readlink \$(which javac)))))
+  622  ls
+  623  vi ./install.sh 
+  624  exit
+  625  docker images
+  626  cd Downloads/
+  627  ls
+  628  mkdir openshift
+  629  cd openshift/
+  630  ls
+  631  docker save -o origin-node.tar openshift/origin-node
+  632  ls
+  633  docker save -o origin-control-plane.tar openshift/origin-control-plane
+  634  ls
+  635  ls -ltr
+  636  ls
+  637  rm ./*
+  638  ls
+  639  cd ..
+  640  ls
+  641  rm -rf ./openshift/
+  642  ls
+  643  vi ./test.txt
+  644  cp ./test.txt ./test2.txt 
+  645  vi ./test2.txt 
+  646  diff ./test.txt ./test2.txt 
+  647  diff ./test2.txt ./test.txt 
+  648  vi ./test.txt 
+  649  diff ./test2.txt ./test.txt 
+  650  cd 
+  651  cd -
+  652  ls
+  653  rm ./test*
+  654  ls
+  655  cd 
+  656  cd workspaces/
+  657  ls
+  658  cd redhat/DO180-apps/
+  659  ls
+  660  git status
+  661  git add .
+  662  git commit -m "add commands"
+  663  git push
+  664  cd ../DO288-apps/
+  665  git pull
+  666  ls
+  667  cd 
+  668  cd Downloads/
+  669  ls
+  670  mkdir s2i
+  671  cd s2i/
+  672  ls
+  673  curl -s https://api.github.com/repos/openshift/source-to-image/releases/latest   | grep browser_download_url   | grep linux-amd64   | cut -d '"' -f 4   | wget -qi -
+  674  ls
+  675  tar -xzvf ./source-to-image-v1.2.0-2a579ecd-linux-amd64.tar.gz 
+  676  ls
+  677  ls -l
+  678  sudo mv ./s2i /usr/local/bin/
+  679  ls
+  680  rm ./sti 
+  681  ls
+  682  cd ..
+  683  ls
+  684  rm -rf ./s2i/
+  685  ls
+  686  podman images
+  687  podman login quay.io
+  688  cd 
+  689  cd workspaces/
+  690  ls
+  691  cd spring
+  692  cd springboot/
+  693  ls
+  694  git status
+  695  git add .
+  696  git commit -m "Modify docker file"
+  697  git push
+  698  cd ../springframework5/
+  699  git status
+  700  vi ./.gitignore 
+  701  git status
+  702  git add .
+  703  git commit -m "Add docker file"
+  704  git push
+  705  ps -ef | grep podman
+  706  cd spring5webapp/
+  707  ls
+  708  cat ./Dockerfile 
+  709  exit
+  710  cd workspaces/springframework5/spring5webapp/
+  711  ls
+  712  vi ./install.sh 
+  713  podman build -t spring5webapp .
+  714  ls
+  715  vi ./Dockerfile 
+  716  podman build -t spring5webapp .
+  717  which javac
+  718  readlink \$(which javac)
+  719  readlink \$(which javac\)
+  720  readlink \$\(which javac\)
+  721  echo $(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+  722  vi ./install.sh 
+  723  . ./install.sh 
+  724  vi ./install.sh 
+  725  . ./install.sh 
+  726  exit
+  727  podman images
+  728  podman rmi c562eeace183
+  729  podman rmi httpd:latest
+  730  podman images
+  731  podman rmi httpd:2.4
+  732  podman image
+  733  podman images
+  734  podman rmi centos:latest
+  735  podman images
+  736  podman rmi centos/mysql-57-centos7
+  737  podman images
+  738  exit
+  739  cd workspaces/springframework5/spring5webapp/
+  740  podman build -t spring5webapp .
+  741  podman images
+  742  podman rmi 055abf365848
+  743  podman images
+  744  podman rmi 55731088d3df
+  745  podman rmi 23f99483a359
+  746  podman images
+  747  podman build -t spring5webapp .
+  748  vi ./Dockerfile 
+  749  podman build -t spring5webapp .
+  750  vi ./Dockerfile 
+  751  podman build -t spring5webapp .
+  752  vi ./Dockerfile 
+  753  podman build -t spring5webapp .
+  754  echo $JAVA_HOME 
+  755  vi ./Dockerfile 
+  756  podman build -t spring5webapp .
+  757  vi ./Dockerfile 
+  758  podman images
+  759  podman rmi ee8145d8af79
+  760  podman images
+  761  podman rmi c97596ae208a
+  762  podman rmi 6b8f27c20b6a
+  763  podman images
+  764  podman rmi 02057438907f
+  765  podman images
+  766  podman rmi a827e5e248f7
+  767  podman images
+  768  podman build -t spring5webapp .
+  769  podman images
+  770  pod tag spring5webapp quay.io/mohammed_m_fawzy/spring5webapp:v1.0
+  771  podman tag spring5webapp quay.io/mohammed_m_fawzy/spring5webapp:v1.0
+  772  podman images
+  773  podman push quay.io/mohammed_m_fawzy/spring5webapp:v1.0
+  774  podman run --name test -d -p 8180:8080 quay.io/mohammed_m_fawzy/spring5webapp:v1.0
+  775  podman stop testpod
+  776  podman stop test
+  777  podman rm test
+  778  podman images
+  779  podman rmi 55731088d3df
+  780  podman rmi --force 55731088d3df
+  781  podman images
+  782  exit
+  783  cd workspaces/springframework5/spring5webapp/
+  784  ls
+  785  cat ./install.sh 
+  786  ls
+  787  cat ./src/main/resources/application.properties 
+  788  ls
+  789  rm ./install.sh 
+  790  ls
+  791  vi ./Dockerfile 
+  792  cd ..
+  793  git status
+  794  git add .
+  795  git commit -a
+  796  git push
+  797  exit
+  798  podman images
+  799  podman rmi 72ad907440f9
+  800  podman rmi --force 72ad907440f9
+  801  podman rmi 72ad907440f9
+  802  podman images
+  803  sudo apt-get remove --purge podman
+  804  sudo apt-get install podman 
+  805  podman images
+  806  podman rmi f3a97ae901c2
+  807  reset
+  808  ls
+  809  oc login -u maly12 -p 16e6ef1e83764250a769 https://api.ocp-eu2.prod.nextcle.com:6443
+  810  cd workspaces/redhat/
+  811  ls
+  812  cd DO180-apps/
+  813  ls
+  814  git pull
+  815  sudo cp ./resources/ocp4.config /usr/local/etc/
+  816  echo ". /usr/local/etc/ocp4.config" >> ~/.bashrc 
+  817  cat ~/.bashrc 
+  818  exit
+  819  oc get pods
+  820  oc get pods -n openshift
+  821  ls
+  822  oc new-project maly12-spring5webapp
+  823  oc project
+  824  oc new-app http://github.com/mohammedmfawzy/springframework5#spring5webapp
+  825  oc new-app https://github.com/mohammedmfawzy/springframework5#spring5webapp
+  826  oc new-app https://github.com/mohammedmfawzy/springframework5#spring5webapp --name=spring5webapp
+  827  oc new-app https://github.com/mohammedmfawzy/springframework5/spring5webapp --name=spring5webapp
+  828  oc new-app https://github.com/mohammedmfawzy/springframework5/tree/master/spring5webapp --name=spring5webapp
+  829  oc new-app https://github.com/mohammedmfawzy/springframework5 --name=springframework5
+  830  echo $RHT_OCP4_GITHUB_USER 
+  831  oc new-app https://github.com/mohammedmfawzy/springframework5 --name=springframework5
+  832  cd workspaces/
+  833  ls
+  834  cd redhat/
+  835  ls
+  836  cd DO288-apps/
+  837  ls
+  838  cd hello-java/
+  839  ls
+  840  cat ./Dockerfile 
+  841  ls
+  842  cd
+  843  oc new-app https://github.com/mohammedmfawzy/DO288-apps#hello-java
+  844  oc new-app https://github.com/mohammedmfawzy/DO288-apps/hello-java --name hello-java
+  845  oc delete project spring5webapp
+  846  oc delete project maly12-spring5webapp
+  847  oc projects
+  848  oc new-app --docker-image=registry.access.redhat.com/rhscl/mysql-57-rhel7:latest --name=mysql-openshift -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=testdb -e MYSQL_ROOT_PASSWORD=r00tpa55
+  849  oc new-project maly12-mysql-openshift
+  850  oc new-app --docker-image=registry.access.redhat.com/rhscl/mysql-57-rhel7:latest --name=mysql-openshift -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=testdb -e MYSQL_ROOT_PASSWORD=r00tpa55
+  851  oc status
+  852  oc get pods
+  853  oc describe mysql-openshift-1-h79ph
+  854  oc describe pod mysql-openshift-1-h79ph
+  855  oc get svc
+  856  oc describe service mysql-openshift
+  857  mysql -uuser1 -pmypa55 -h 172.30.163.128
+  858  oc describe service mysql-openshift
+  859  oc get dc
+  860  oc describe dc
+  861  oc get svc
+  862  oc expose service mysql-openshift
+  863  oc get route
+  864  mysql -uuser1 -pmypa55 -h mysql-openshift-maly12-mysql-openshift.apps.ocp-eu2.prod.nextcle.com
+  865  oc get pods
+  866  oc port-forward mysql-openshift-1-h79ph 3306:13306
+  867  oc port-forward mysql-openshift-1-h79ph 31306:1306
+  868  oc port-forward mysql-openshift-1-h79ph 13306:3306
+  869  oc port-forward mysql-openshift-1-h79ph 3306:3306
+  870  oc port-forward mysql-openshift-1-h79ph 13306:3306
+  871  oc delete project maly12-mysql-openshift
+  872  oc new-project maly12-mysql-openshift
+  873  oc new-app --docker.image=registry.access.redhat.com/rhscl/mysql-57-rhel7:latest --name=mysql-openshift -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=testdb -e MYSQL_ROOT_PASSWORD=r00tpa55
+  874  oc new-app --docker-image=registry.access.redhat.com/rhscl/mysql-57-rhel7:latest --name=mysql-openshift -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=testdb -e MYSQL_ROOT_PASSWORD=r00tpa55
+  875  oc get pods
+  876  oc get pods -w
+  877  oc get pods
+  878  oc get svc
+  879  oc expose service mysql-openshift
+  880  oc describe service mysql-openshift
+  881  oc describe dc mysql-openshift
+  882  oc describe service mysql-openshift
+  883  oc describe app mysql-openshift
+  884  oc get pods
+  885  oc describe pod mysql-openshift-1-zdbtd
+  886  oc get routes
+  887  mysql -uuser1 -pmypa55 -h mysql-openshift-maly12-mysql-openshift.apps.ocp-eu2.prod.nextcle.com -P 3306 --protocol tcp
+  888  ping mysql-openshift-maly12-mysql-openshift.apps.ocp-eu2.prod.nextcle.com
+  889  oc get pods
+  890  oc port-forward mysql-openshift-1-zdbtd 13306:3306
+  891  oc delete project maly12-mysql-openshift
+  892  ping mysql-openshift-maly12-mysql-openshift.apps.ocp-eu2.prod.nextcle.com
+  893  ping ocp-eu2.prod.nextcle.com
+  894  ping nextcle.com
+  895  cd workspaces/redhat/DO180-apps/
+  896  ls
+  897  cd
+  898  oc new-project maly12-route
+  899  oc new-app java:11~https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp
+  900  oc get pods
+  901  oc get pods -w
+  902  oc logs -f bc/spring5webapp
+  903  oc
+  904  oc delete project maly12-route
+  905  oc get pods
+  906  oc new-project maly12-route
+  907  oc new-app java:11~https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp
+  908  oc get pods
+  909  oc get pods -w
+  910  oc logs -f bc/spring5webapp
+  911  oc get pods
+  912  oc logs -f pod spring5webapp-1-kzmjc
+  913  oc get pods
+  914  oc get svc
+  915  oc expose svc/spring5webapp
+  916  oc get routes
+  917  oc describe route spring5webapp
+  918  curl spring5webapp-maly12-route.apps.ocp-eu2.prod.nextcle.com/authors
+  919  oc delete project maly12-route
+  920  oc get pods
+  921  oc get is -n openshift
+  922  oc get is -n openshift -o {"NAME","IMAGE REPOSITORY"}
+  923  oc get is -n openshift -o custom-columns=NAME,IMAGE REPOSITORY,TAG
+  924  oc get is -n openshift -o custom-columns=NAME,TAG
+  925  oc get is -n openshift -o narrow
+  926  oc get is -n openshift -o wide
+  927  oc get is -n openshift | grep java
+  928  oc new-project maly12-route
+  929  oc new-app https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp
+  930  oc get pods
+  931  oc logs -f bc/spring5webapp
+  932  oc delete-project maly12-route
+  933  oc delete project maly12-route
+  934  oc new-project maly12-route
+  935  oc delete project maly12-route
+  936  oc get pods
+  937  oc new-project maly12-route
+  938  oc new-app https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp
+  939  oc new-app -i java https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp
+  940  oc get pods
+  941  oc logs -f bc/spring5webapp
+  942  oc logs -f bc/spring5webapp -n 1000
+  943  oc logs -f bc/spring5webapp 
+  944  oc get svc
+  945  oc expose service spring5webapp --name=myapp
+  946  oc get route
+  947  oc delete project maly12-route
+  948  oc new-project maly12-s2i
+  949  oc new-app https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp > s2i.json
+  950  oc get pods
+  951  less ./s2i.json 
+  952  oc new-app -i java https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp > s2i.json
+  953  oc get pods
+  954  cat s2i.json 
+  955  cat s2i.json | jq
+  956  cat s2i.json 
+  957  oc get pods
+  958  oc delete project maly12-s2i
+  959  oc get pods
+  960  oc new-project maly12-s2i
+  961  oc delete project maly12-s2i
+  962  oc new-project maly12-s2i
+  963  oc -o json new-app -i java https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp > s2i.json
+  964  cat s2i.json 
+  965  cat s2i.json | jq
+  966  ls
+  967  mv ./s2i.json ./workspaces/redhat/DO180-apps/resources/
+  968  oc describe bc
+  969  oc describe bc/spring5webapp
+  970  oc get pods
+  971  ls
+  972  oc get pods
+  973  oc get all
+  974  oc project
+  975  oc delete project maly12-s2i
+  976  oc new-project maly12-s2i
+  977  oc -o json new-app -i java https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp > ./workspaces/redhat/DO180-apps/resources/s2i.json 
+  978  oc get pods
+  979  oc describe bc/spring5webapp
+  980  oc delete project maly12-s2i
+  981  oc  new-app -i java https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp 
+  982  oc whoami
+  983  oc delete project maly12-s2i
+  984  oc projects
+  985  oc project
+  986  oc new-project maly12-s2i
+  987  oc project
+  988  oc projects
+  989  oc  new-app -i java https://github.com/mohammedmfawzy/springframework5 --context-dir spring5webapp --name spring5webapp 
+  990  oc describe bc
+  991  oc get dc
+  992  oc describe dc
+  993  oc describe dc | grep -i secret
+  994  oc describe bc | grep -i secret
+  995  oc describe bc/spring5webapp
+  996  oc logs bc/spring5webapp
+  997  oc logs bc/spring5webapp | grep -i secret
+  998  oc get pods
+  999  oc get svc
+ 1000  oc expose service spring5webapp
+ 1001  oc get routes
+ 1002  oc edit bc/spring5webapp
+ 1003  oc get routes
+ 1004  oc get pods
+ 1005  oc get pods -w
+ 1006  oc edit bc/spring5webapp
+ 1007  oc get pods -w
+ 1008  oc edit bc/spring5webapp
+ 1009  oc get pods -w
+ 1010  oc get pods
+ 1011  oc get pods -w
+ 1012  oc logs -f bc/spring5webapp
+ 1013  oc get pods -w
+ 1014  oc get pods 
+ 1015  oc delete project maly12-s2i
+ 1016  echo $RHT_OCP4_WILDCARD_DOMAIN 
+ 1017  exit
+ 1018  mysql -uuser1 -pmypa55 -h localhost
+ 1019  mysql -uuser1 -pmypa55 -h localhost:13306
+ 1020  sudo service mysql stop
+ 1021  mysql -uuser1 -pmypa55 -h localhost
+ 1022  mysql -uuser1 -pmypa55 -h localhost --protocol tcp
+ 1023  sudo service mysql start
+ 1024  mysql -uuser1 -pmypa55 -h localhost:13306 --protocol tcp
+ 1025  mysql -uuser1 -pmypa55 -h localhost -P 13306 --protocol tcp
+ 1026  exit
+ 1027  dnf install buildah
+ 1028  sudo apt-get install dnf
+ 1029  podman rmi -a
+ 1030  podman rmi --force -a
+ 1031  podman images
+ 1032  oc -version
+ 1033  oc --version
+ 1034  oc --v
+ 1035  oc -v
+ 1036  startopenshift 
+ 1037  ls
+ 1038  cd workspaces/springframework5/spring5webapp/
+ 1039  ls
+ 1040  podman images
+ 1041  podman build --help
+ 1042  ls
+ 1043  cd
+ 1044  cd workspaces/redhat/DO288-apps/container-build/
+ 1045  ls
+ 1046  vi ./Dockerfile 
+ 1047  git checkout container-build
+ 1048  git fetch --all
+ 1049  git checkout container-build
+ 1050  git add .
+ 1051  git status
+ 1052  git push
+ 1053  git add .
+ 1054  git commit -m "Modified Docker file
+ 1055  "
+ 1056  git push
+ 1057  ls
+ 1058  vi ./Dockerfile 
+ 1059  git add .
+ 1060  git commit -m "Modified Docker file
+ 1061  "
+ 1062  git push
+ 1063  sudo apt-get install docker-registry 
+ 1064  ls
+ 1065  ls /etc/docker/registry/config.yml 
+ 1066  cat /etc/docker/registry/config.yml 
+ 1067  sudo service docker-registry start
+ 1068  podman search localhost:5000 safdsfa
+ 1069  podman search --help
+ 1070  podman search localhost:5000 dsafadsfa
+ 1071  podman search localhost:5000 mysql
+ 1072  podman search localhost:5000 
+ 1073  podman serach mysql localhost:5000
+ 1074  podman search localhost:5000/mysql
+ 1075  podman search --help
+ 1076  podman search --tls-verify=false localhost:5000/mysql
+ 1077  podman images
+ 1078  sudo snap install skopeo --edge
+ 1079  sudo snap install skopeo 
+ 1080  cd workspaces/springframework5/spring5webapp/
+ 1081  ls
+ 1082  history | grep build
+ 1083  podman build -t --layers=false spring5webapp .
+ 1084  podman build -t  spring5webapp .
+ 1085  podman images
+ 1086  podman tag localhost/spring5webapp:latest localhost:5000/spring5webapp:latest
+ 1087  podman images
+ 1088  podman push localhost:5000/spring5webapp:latest
+ 1089  podman push --tls-verify=false localhost:5000/spring5webapp:latest
+ 1090  podman search localhost:5000
+ 1091  podman search localhost:5000/spring
+ 1092  podman search --tls-verify=false localhost:5000/spring
+ 1093  sudo apt-get install tree
+ 1094  tree 
+ 1095  sudo snap install skopeo --edge
+ 1096  sudo snap install skopeo --edge --jailmode
+ 1097  skopeo copy --help
+ 1098  oc api-resources
+ 1099  kubectl api-resources
+ 1100  startwindows 
+ 1101  oc status
+ 1102  oc login -u system:admin
+ 1103  stopopenshift 
+ 1104  cd
+ 1105  cd workspaces/redhat/DO180-apps/
+ 1106  git pull
+ 1107  ls
+ 1108  sudo rm /usr/local/bin/oc 
+ 1109  sudo mv ./resources/oc /usr/local/bin/
+ 1110  ls -l /usr/local/bin/
+ 1111  git status
+ 1112  git add .
+ 1113  git pull
+ 1114  git status
+ 1115  git add .
+ 1116  git commit -m 
+ 1117  git commit -m "modified commands"
+ 1118  git push
+ 1119  ls
+ 1120  cd ../DO288-apps/
+ 1121  ls
+ 1122  sudo service bluetooth restart
+ 1123  ls
+ 1124  cd
+ 1125  cd workspaces/springframework5/spring5webapp/
+ 1126  ls
+ 1127  mv ./Dockerfile ./Dockerfile_back
+ 1128  git add .
+ 1129  git status
+ 1130  git commit -m "backup docker file"
+ 1131  git push
+ 1132  ls
+ 1133  vi ./src/main/resources/templates/authors/list.html 
+ 1134  git add .
+ 1135  git commit -m "test update"
+ 1136  git push
+ 1137  ls
+ 1138  cd workspaces/
+ 1139  ls
+ 1140  cd springframework5/
+ 1141  ls
+ 1142  mkdir console
+ 1143  cd console/
+ 1144  ls
+ 1145  cp ../spring5webapp/Dockerfile_back ./
+ 1146  vi ./Dockerfile_back 
+ 1147  ls
+ 1148  mv ./Dockerfile_back ./Dockerfile
+ 1149  ls
+ 1150  cd ../../
+ 1151  ls
+ 1152  git add .
+ 1153  cd springframework5/
+ 1154  git add .
+ 1155  git commit -m "add console project"
+ 1156  git push
+ 1157  cp ../springboot/Dockerfile_ubuntu ./console/
+ 1158  cd console/
+ 1159  ls
+ 1160  rm ./Dockerfile
+ 1161  mv ./Dockerfile_ubuntu ./Dockerfile
+ 1162  vi ./Dockerfile 
+ 1163  ls
+ 1164  git add .
+ 1165  git commit -m "add console project"
+ 1166  git push
+ 1167  vi ./Dockerfile 
+ 1168  git add .
+ 1169  git commit -m "add console project"
+ 1170  git push
+ 1171  vi ./Dockerfile 
+ 1172  cd ../../redhat/DO288-apps/
+ 1173  ls
+ 1174  ls ./post-commit/
+ 1175  cd ../../
+ 1176  ls
+ 1177  cd springframework5/spring5webapp/
+ 1178  ls
+ 1179  mv ./Dockerfile_back ./Dockerfile
+ 1180  git push
+ 1181  cd ../console/
+ 1182  ls
+ 1183  mv ./Dockerfile ./Dockerfile_back
+ 1184  vi ./index.html
+ 1185  git add .
+ 1186  git commit -m "add html file"
+ 1187  git push
+ 1188  ls
+ 1189  cd ..
+ 1190  ls
+ 1191  vi ./spring5webapp/
+ 1192  vi ./spring5webapp/Dockerfile 
+ 1193  ls
+ 1194  cd spring5webapp/
+ 1195  ls
+ 1196  cp ./Dockerfile ./Dockerfile_back
+ 1197  vi ./Dockerfile
+ 1198  git add .
+ 1199  git commit -m "update docker file"
+ 1200  git push
+ 1201  cd ../console/
+ 1202  vi ./Dockerfile_back 
+ 1203  ls
+ 1204  mv ./Dockerfile_back ./Dockerfile
+ 1205  cat ../../redhat/DO288-apps/php-hello-dockerfile/
+ 1206  cat ../../redhat/DO288-apps/php-hello-dockerfile/Dockerfile 
+ 1207  vi ./Dockerfile 
+ 1208  git add .
+ 1209  git commit -m "update docker"
+ 1210  git push
+ 1211  git add .
+ 1212  git commit -m "update docker"
+ 1213  git push
+ 1214  vi ./Dockerfile 
+ 1215  git add .
+ 1216  git commit -m "update docker"
+ 1217  git push
+ 1218  ls
+ 1219  mv ./Dockerfile ./Dockerfile_pack
+ 1220  mv ./Dockerfile_pack ./Dockerfile_back 
+ 1221  cp ../../springboot/Dockerfile_ubuntu ./Dockerfile
+ 1222  vi ./Dockerfile
+ 1223  git add .
+ 1224  git commit -m "update docker"
+ 1225  git push
+ 1226  ls
+ 1227  mv ./Dockerfile ./Dockerfile_ubuntu 
+ 1228  cp ./Dockerfile_back ./Dockerfile
+ 1229  vi ./Dockerfile
+ 1230  git add .
+ 1231  git commit -m "update docker"
+ 1232  git push
+ 1233  vi ./Dockerfile
+ 1234  git add .
+ 1235  git commit -m "update docker"
+ 1236  git push
+ 1237  vi ./Dockerfile
+ 1238  git add .
+ 1239  git commit -m "update docker"
+ 1240  git push
+ 1241  ls
+ 1242  vi ./Dockerfile
+ 1243  git add .
+ 1244  git commit -m "update docker"
+ 1245  git push
+ 1246  vi ./Dockerfile
+ 1247  cp ../../springboot/Dockerfile_centos ./
+ 1248  vi ./Dockerfile_centos 
+ 1249  ls
+ 1250  mv ./Dockerfile ./Dockerfile_rhel
+ 1251  mv ./Dockerfile_centos  ./Dockerfile
+ 1252  podman -t build myconsole .
+ 1253  history | grep 'podman'
+ 1254  podman  build -t  myconsole .
+ 1255  git images
+ 1256  podman images
+ 1257  history | grep tag
+ 1258  podman tag myconsole quay.io/mohammed_m_fawzy/myconsole
+ 1259  podman images
+ 1260  history | grep push
+ 1261  podman push quay.io/mohammed_m_fawzy/myconsole
+ 1262  podman login -u mohammed_m_fawzy quay.io
+ 1263  podman push quay.io/mohammed_m_fawzy/myconsole
+ 1264  vi ./Dockerfile
+ 1265  podman  build -t  myconsole .
+ 1266  podman tag myconsole quay.io/mohammed_m_fawzy/myconsole
+ 1267  podman push quay.io/mohammed_m_fawzy/myconsole
+ 1268  ls
+ 1269  cat ./Dockerfile_rhel 
+ 1270  vi ./Dockerfile
+ 1271  podman  build -t  myconsole .
+ 1272  podman images
+ 1273  podman run --name myconsole localhost/myconsole -d
+ 1274  history | grep run
+ 1275  podman run --name myconsole -d localhost/myconsole 
+ 1276  podman ps
+ 1277  podman ps -a
+ 1278  podman stop 4d8354dd9edc
+ 1279  podman rm myconsole
+ 1280  podman ps -a
+ 1281  podman run --name myconsole -d localhost/myconsole 
+ 1282  podman ps
+ 1283  podman exec -it myconsole /bin/bash
+ 1284  podman tag myconsole quay.io/mohammed_m_fawzy/myconsole
+ 1285  podman push quay.io/mohammed_m_fawzy/myconsole
+ 1286  cat ../../redhat/DO288-apps/php-hello-dockerfile/Dockerfile 
+ 1287  ping 172.25.250.254
+ 1288  oc projects
+ 1289  oc project maly12-s2i-scripts
+ 1290  oc get pods
+ 1291  oc rsh bonjour-1-n6zrk
+ 1292  ls
+ 1293  cat ./Dockerfile
+ 1294  podman  build -t  myconsole .
+ 1295  podman tag myconsole quay.io/mohammed_m_fawzy/myconsole
+ 1296  podman push quay.io/mohammed_m_fawzy/myconsole
+ 1297  vi ./Dockerfile
+ 1298  git add .
+ 1299  git commit -m "update docker"
+ 1300  git push
+ 1301  vi ./Dockerfile
+ 1302  git add .
+ 1303  git commit -m "update docker"
+ 1304  git push
+ 1305  vi ./Dockerfile
+ 1306  git add .
+ 1307  git commit -m "update docker"
+ 1308  git push
+ 1309  startwindows 
+ 1310  cd ..
+ 1311  ls
+ 1312  git status
+ 1313  cd ../redhat/
+ 1314  git status
+ 1315  cd DO180-apps/
+ 1316  git status
+ 1317  git add .
+ 1318  git commit -m "Add s2i.json file"
+ 1319  git push
+ 1320  cd ../DO288-apps/
+ 1321  git status
+ 1322  git add .
+ 1323  git commit -m "Add to do items"
+ 1324  git push
+ 1325  cd ..
+ 1326  ls
+ 1327  cd ..
+ 1328  ls
+ 1329  git status
+ 1330  history > ./history.txt
