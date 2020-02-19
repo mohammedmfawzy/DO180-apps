@@ -5,7 +5,8 @@ Password:16e6ef1e83764250a769
 API Endpoint:https://api.ocp-eu2.prod.nextcle.com:6443
 Cluster Id:5ee65450-6e18-46e4-bb6d-535a44ec33c4
 
-# Add Enviroment Variable to the start Command
+# Set Enviroment Variables
+echo '. /usr/local/etc/ocp4.config' >> ./.bashrc
 
 
 # Start lab container
