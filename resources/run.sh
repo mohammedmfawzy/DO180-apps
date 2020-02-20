@@ -1,5 +1,4 @@
 #!/bin/sh
-
 if [ -d "work" ]; then
   sudo rm -fr work
 fi
