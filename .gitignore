@@ -1,0 +1,15 @@
+*.iml
+/.metadata/
+**/bin/
+**/target/
+**/package/
+**/.idea/
+/.recommenders/
+/RemoteSystemsTempFiles/
+/RTF/activemq-data/
+**/activemq-data/
+.settings/*
+*.class
+**/log/
+**/*.log
+**/logs/
